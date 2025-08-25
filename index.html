@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To‑Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>To‑Do List</h1>
+      <form id="new-task-form" class="new-task" autocomplete="off" aria-label="Add new task">
+        <input id="task-input" class="new-task__input" type="text" placeholder="What needs to be done?" aria-label="Task title" />
+        <button class="btn" type="submit" aria-label="Add task">Add</button>
+      </form>
+    </header>
+
+    <section class="controls" aria-label="Filters and actions">
+      <div class="filters" role="radiogroup" aria-label="Filter tasks">
+        <label><input type="radio" name="filter" value="all" checked /> All</label>
+        <label><input type="radio" name="filter" value="active" /> Active</label>
+        <label><input type="radio" name="filter" value="completed" /> Completed</label>
+      </div>
+      <button id="clear-completed" class="btn btn--ghost" type="button">Clear Completed</button>
+    </section>
+
+    <ul id="task-list" class="list" aria-live="polite" aria-label="Task list"></ul>
+
+    <footer class="footer">
+      <span id="items-left">0 items left</span>
+      <span class="hint">Tip: double‑click a task to edit</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
